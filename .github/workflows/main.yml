@@ -2,11 +2,15 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]  # Trigger saat push ke branch main
+    branches: [ "main" ] 
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest
+    # Memberikan izin kepada 'bot' untuk menulis (push) ke branch gh-pages.
+    permissions:
+      contents: write
+    # ===================================================
 
     steps:
       - name: Checkout
@@ -32,5 +36,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  
-          keep_files: true  
+          publish_dir: ./ 
