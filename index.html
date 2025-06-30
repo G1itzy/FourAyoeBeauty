@@ -9,6 +9,20 @@
       gtag('js', new Date());
     
       gtag('config', 'G-YBK8N7W23J');
+      gtag("event", "scroll", {percent_scrolled: 90, send_to: "G-YBK8N7W23J"})
+      dataLayer.push({
+        event: "gtm.scrollDepth",
+        gtm.scrollThreshold: 90,
+        gtm.scrollUnits: "percent",
+        gtm.scrollDirection: "vertical",
+        gtm.triggers: "7",
+        gtm.uniqueEventId: 12
+      })
+      dataLayer.push({event: "gtm.load", gtm.uniqueEventId: 11})
+      dataLayer.push({event: "gtm.dom", gtm.uniqueEventId: 10})
+      dataLayer.push({event: "gtm.js", gtm.start: 1751254781340, gtm.uniqueEventId: 3, gtm.priorityId: undefined})
+      dataLayer.push({event: "gtm.init", gtm.uniqueEventId: 2})
+      dataLayer.push({event: "gtm.init_consent", gtm.uniqueEventId: 1})
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
